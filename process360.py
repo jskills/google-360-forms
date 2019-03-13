@@ -22,7 +22,7 @@ def sanitize_answers(val):
         returnVal = 5
     elif val == 'Partially Agree':
         returnVal = 4
-    elif val == "I'm Neutral on This":
+    elif val == "I'm Neutral on This" or val == "I'm Neutral On This":
         returnVal = 3
     elif val == 'Partially Disagree':
         returnVal = 2
@@ -289,7 +289,7 @@ for un in sorted(uniqueNames):
 
 
 # now run through all inviduals and show results with global averages for comparison
-globalCnt = 0
+#globalCnt = 0
 for un in sorted(uniqueNames):
     # access and process rows for this person
     npArr = uniqueData[un].values
@@ -311,7 +311,7 @@ for un in sorted(uniqueNames):
   
     # create file for each individual getting reviewed
     showResults(un, qNames, localDict, localMatrix, globalMatrix, localAvg, globalAvg)
-    globalCnt += 1
+    #globalCnt += 1
     
 
 
